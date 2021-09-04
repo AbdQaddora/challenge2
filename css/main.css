@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+}
+
+.container {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  background-color: hsl(244, 38%, 16%);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  color: white;
+  border-radius:15px ;
+  overflow: hidden  ;
+}
+
+.content {
+  padding: 10% 100px 10% 70px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.content h1 span {
+  color: hsl(277, 64%, 61%);
+}
+
+.content p {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.6em;
+  margin-bottom: 30px;
+}
+
+.analyses {
+  display: flex;
+  justify-content: space-between;
+}
+
+.analyses .card h3 {
+  font-family: "Inter", sans-serif;
+  margin-bottom: 15px;
+}
+
+.analyses .card span {
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.img {
+  background-image: url(../images/image-header-desktop.jpg);
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.img::after {
+  content: "";
+  background-color: hsl(277deg 84% 19% / 60%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width:640px) {
+
+    .container{
+        grid-template-columns: 100%;
+        text-align: center;
+    }
+
+    .content{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .img{
+        order: -1;
+        height: 250px;
+    }
+}
